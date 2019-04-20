@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        
+         <h:form>
+             <p:panel header="Liste des Marchandises" style="margin-bottom:20px">
+                 <p:dataTable var="marchandise" value="#{gestionTransportMB.listeMarchandises}">
+                    <p:column headerText="Numéro">
+                        <h:outputText value="#{marchandise.numero}" />
+                    </p:column>
+
+                    <p:column headerText="Nom">
+                        <h:outputText value="#{marchandise.nom}" />
+                    </p:column>
+
+                    <p:column headerText="Poids">
+                        <h:outputText value="#{marchandise.poids}" />
+                    </p:column>
+
+                    <p:column headerText="Volume">
+                        <h:outputText value="#{marchandise.volume}" />
+                    </p:column>
+                     
+                     <p:column headerText="Cargaison">
+                         <h:outputText value="#{marchandise.cargaison}" />
+                    </p:column>
+
+                </p:dataTable>
+            </p:panel>
+        </h:form>
+        
+    </h:body>
+</html>
+
